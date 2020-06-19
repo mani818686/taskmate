@@ -121,7 +121,7 @@ EMAIL_USE_SSL=False
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATIC_PATH=os.path.join(BASE_DIR,'staticfiles')
+
 STATIC_URL = '/static/'
 STATICFILES_DIRS=[os.path.join(BASE_DIR,'static')]
 CRISPY_TEMPLATE_PACK='bootstrap4'
@@ -129,3 +129,4 @@ LOGIN_REDIRECT_URL='todolist'
 LOGIN_URL="login"
 django_heroku.settings(locals())
 
+STATIC_ROOT=os.path.join(BASE_DIR,'staticfiles')
