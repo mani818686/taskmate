@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title> Email..</title>
+{% endblock title %}
+
+{% block content %}
+<form method="post">
+ <div class="container">
+ <br>
+ {% csrf_token %}
+  <label >Email:</label><br>
+  <input type="text" id="fname" name="email"  class="form-control col-lg-6" placeholder="Enter email""><br>
+  <label>Subject</label><br>
+  <input type="text" id="lname" name="subject"  class="form-control col-lg-6"placeholder="Subject"><br>
+  <label>Message</label><br>
+  <textarea class="form-control" name="message" rows="10"></textarea>
+  <br>
+  <button type="submit" class="btn btn-primary col-lg-2">Submit</button>
+</form>
+</div>
+{% endblock content %}
